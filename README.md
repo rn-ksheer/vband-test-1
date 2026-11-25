@@ -19,7 +19,44 @@ A wireless Morse key interface built around an **esp32mini microcontroller**. Co
 - Enable/Disable the buzzer using a jumper.
 - Can be powered from a computer or a power bank.
 
+### Device
+<p align="center">
+<img src="https://github.com/user-attachments/assets/6b839d7d-ead8-4452-95cd-797ae7ca1826" width="25%" alt="top view">
+</p>
+
+### Straight-key 3.5 mm jack wiring
+<p align="center">
+<img src="https://github.com/user-attachments/assets/8b1792ce-840f-46e9-8743-4f775d8a575c" width="40%" alt="3 5mm TRS Straight Key Pinout">
+</p>
+
+### Paddle 3.5 mm jack wiring
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3c18822b-4436-4d8e-9915-a3711d87c0c7" width="40%" alt="3 5 mm TRS Paddle Key Pinout">
+</p>
+
+### Buzzer J1
+<p align="center">
+<img src="https://github.com/user-attachments/assets/85cffd90-2701-4e6c-a52a-3f6ec9b9174d" width="10%" alt="jumper conn">
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/3774796b-c42f-4b88-aefd-515785695b76" width="30%" alt="Jumper Open and Closed Buzzer States">
+</p>
+
+<br>
+<br>
+
 ## Quick start
+<img width="50%" alt="ble device" src="https://github.com/user-attachments/assets/9a671d66-ee57-4d2b-9e16-baf136012bd6" />
+
+<img src="https://github.com/user-attachments/assets/263584ad-ffa5-4429-afc4-e1e5d176ebce" width="30%" alt="ble device">
+
+
+
+https://github.com/user-attachments/assets/6a893ce2-07dc-420e-a74e-3e57f22fd450
+
+
+
 
 1. Set the DIP switches to the desired mode before powering the device.
 2. Connect power using the USB Type-C cable.
@@ -32,39 +69,23 @@ A wireless Morse key interface built around an **esp32mini microcontroller**. Co
 
 ## DIP switch modes
 
-The switch pins are GPIO 4, 5, 6, 7, and 10, in SW1-to-SW5 order. They use internal pull-ups: **0 = OFF/open**, **1 = ON/closed to GND**. SW1 is the least-significant bit when the firmware calculates the DIP value.
-
 | DIP value | SW1 | SW2 | SW3 | SW4 | SW5 | Selected mode | Key behavior / speed |
 |---:|:---:|:---:|:---:|:---:|:---:|---|---|
 | 0 | 0 | 0 | 0 | 0 | 0 | Notepad straight key | 10 WPM |
-| 1 | 1 | 0 | 0 | 0 | 0 | Notepad paddle | 12 WPM |
+| 1 | 1 | 0 | 0 | 0 | 0 | Notepad paddle key | 12 WPM |
 | 3 | 1 | 1 | 0 | 0 | 0 | VBand Type 1 | Configurable on the website |
 | 7 | 1 | 1 | 1 | 0 | 0 | VBand Type 2 | Configurable on the website |
 | 15 | 1 | 1 | 1 | 1 | 0 | VBand Type 3 | Configurable on the website |
 | 31 | 1 | 1 | 1 | 1 | 1 | VBand Type 4 | Configurable on the website |
 
 
-## Wiring 
-
-All key contacts close to GND when pressed. The straight key uses GPIO 0. For a paddle, DIT uses GPIO 0 and DAH uses GPIO 1; both inputs use internal pull-ups.
-
-| Connection | Pin | Behavior |
-|---|---:|---|
-| Straight key | GPIO 0 to GND | Active-low input |
-| Paddle DIT | GPIO 0 to GND | Active-low input |
-| Paddle DAH | GPIO 1 to GND | Active-low input |
-| Buzzer | GPIO 3 | Circuit-side SPST switch controls buzzer enable |
-| Onboard LED | GPIO 8 | Inverted logic: LOW turns it on |
-| External LED | GPIO 20 | Normal logic: HIGH turns it on |
-| DIP switch bank | GPIO 4, 5, 6, 7, 10 | `INPUT_PULLUP`; ON connects the input to GND |
-
-In Notepad straight-key mode, the indicators follow the physical key. In the Notepad paddle mode, the buzzer and LEDs follow the generated Morse elements. In the browser keyboard modes, they follow the pressed key/paddle contacts.
+>Buzzer and LEDs follow the generated Morse elements.
 
 ## Browser tools
 
 These are the browser destinations and key modes recorded for the project. Configure Morse key type and WPM in each site's settings where available. Keep the browser page focused while sending.
 
-| Website | Straight key | Paddle | Firmware mode |
+| Website | Straight key | Paddle | Mode |
 |---|:---:|:---:|---|
 | [VBand](https://hamradio.solutions/vband/) | Yes | Yes | Type 1 |
 | [Vail](https://vail.woozle.org/) | Yes | Yes | Type 2 |
@@ -86,31 +107,21 @@ Configure the key type and WPM in the app where those options are available.
 | [Morse Keyer](https://play.google.com/store/apps/details?id=com.qft8.morsekeyer&hl=en_IN) | Yes | Yes | Type 1 |
 | [Morse Chat](https://play.google.com/store/apps/details?id=digital.dong.morsechat&hl=en_IN) | Yes | No | Type 1 |
 
-## Photos and wiring diagrams
 
-Add project photos and wiring illustrations in this section when they are ready.
 
-### PCB photos
 
-`[PCB front photo placeholder — add image here]`
 
-`[PCB back photo placeholder — add image here]`
+## Firmware Bin file
 
-### Straight-key 3.5 mm jack wiring
-
-`[Straight-key 3.5 mm jack pinout placeholder — add image here]`
-
-### Paddle 3.5 mm jack wiring
-
-`[Paddle 3.5 mm jack pinout placeholder — add image here]`
-
-## Firmware files
-
-The current source files are in this folder. Open `cpo.ino` with the accompanying headers and `dictionary.h` in the Arduino IDE. The BLE device name is set in the main sketch as `MorseBle`.
+Bin file and instructions to upload will be added soon!! .
 
 ## Notes
 
-- The mode is sampled once after BLE connects. Reboot after changing DIP switches.
+- The mode is selected once after BLE connects. Reboot after changing DIP switches.
 - Disconnect one computer/phone before pairing the adapter with another host.
 - Slight warmth during BLE operation has been observed on the prototype.
+
+
+📫 Please mail for any query/support:
+rn.ksheer+vband@gmail.com
 
