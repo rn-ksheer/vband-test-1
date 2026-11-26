@@ -46,18 +46,24 @@ A wireless Morse key interface built around an **esp32mini microcontroller**. Co
 <br>
 <br>
 
-## Quick start
+### Adding MorseBle 
+#### PC --> Bluetooth & devices > Devices
+<p align="center">
 <img width="50%" alt="ble device" src="https://github.com/user-attachments/assets/9a671d66-ee57-4d2b-9e16-baf136012bd6" />
+</p>
 
+#### Phone --> Bluetooth > Pair new device
+<p align="center">
+<img width="20%" alt="Edited_20261126_144222" src="https://github.com/user-attachments/assets/bbff33ef-beac-4113-a46e-ed9a73cb362a" />
+</p>
+
+<!-- 
 <img src="https://github.com/user-attachments/assets/263584ad-ffa5-4429-afc4-e1e5d176ebce" width="30%" alt="ble device">
 
 
+https://github.com/user-attachments/assets/6a893ce2-07dc-420e-a74e-3e57f22fd450 -->
 
-https://github.com/user-attachments/assets/6a893ce2-07dc-420e-a74e-3e57f22fd450
-
-
-
-
+## Quick start
 1. Set the DIP switches to the desired mode before powering the device.
 2. Connect power using the USB Type-C cable.
 3. Pair/connect to the BLE keyboard named **MorseBle**. The device waits for this connection before reading the DIP switches.
@@ -69,14 +75,14 @@ https://github.com/user-attachments/assets/6a893ce2-07dc-420e-a74e-3e57f22fd450
 
 ## DIP switch modes
 
-| DIP value | SW1 | SW2 | SW3 | SW4 | SW5 | Selected mode | Key behavior / speed |
-|---:|:---:|:---:|:---:|:---:|:---:|---|---|
-| 0 | 0 | 0 | 0 | 0 | 0 | Notepad straight key | 10 WPM |
-| 1 | 1 | 0 | 0 | 0 | 0 | Notepad paddle key | 12 WPM |
-| 3 | 1 | 1 | 0 | 0 | 0 | VBand Type 1 | Configurable on the website |
-| 7 | 1 | 1 | 1 | 0 | 0 | VBand Type 2 | Configurable on the website |
-| 15 | 1 | 1 | 1 | 1 | 0 | VBand Type 3 | Configurable on the website |
-| 31 | 1 | 1 | 1 | 1 | 1 | VBand Type 4 | Configurable on the website |
+| DIP value | SW1 | SW2 | SW3 | SW4 | SW5 | Selected mode | Key behavior / speed | Buzzer|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 | 0 | Notepad straight key | 10 WPM | ✅ | 
+| 1 | 1 | 0 | 0 | 0 | 0 | Notepad paddle key | 12 WPM |  :white_check_mark: |
+| 3 | 1 | 1 | 0 | 0 | 0 | VBand Type 1 | Configurable on the website | :x: |
+| 7 | 1 | 1 | 1 | 0 | 0 | VBand Type 2 | Configurable on the website | :x: |
+| 15 | 1 | 1 | 1 | 1 | 0 | VBand Type 3 | Configurable on the website | :x: |
+| 31 | 1 | 1 | 1 | 1 | 1 | VBand Type 4 | Configurable on the website | :x: |
 
 
 >Buzzer and LEDs follow the generated Morse elements.
@@ -86,11 +92,11 @@ https://github.com/user-attachments/assets/6a893ce2-07dc-420e-a74e-3e57f22fd450
 These are the browser destinations and key modes recorded for the project. Configure Morse key type and WPM in each site's settings where available. Keep the browser page focused while sending.
 
 | Website | Straight key | Paddle | Mode |
-|---|:---:|:---:|---|
+|:---:|:---:|:---:|:---:|
 | [VBand](https://hamradio.solutions/vband/) | Yes | Yes | Type 1 |
 | [Vail](https://vail.woozle.org/) | Yes | Yes | Type 2 |
 | [Vail Morse](https://vailmorse.com/) | Yes | Yes | Type 2 |
-| [Morse Me Please](https://morsemeplease.com/) | No | Yes | Type 3 |
+| [Morse Me Please](https://morsemeplease.com/) | :x: | Yes | Type 3 |
 | [CW Bot](https://cw-bot.hamradioduo.com/) | Yes | Yes | Type 1 |
 | [CW Checker](https://tools.hamradioduo.com/cw-checker/) | Yes | Yes | Type 1 |
 | [Morse Code World keyer](https://morsecode.world/international/trainer/keyer.html) | Yes | Yes | Type 4 |
@@ -101,8 +107,8 @@ These are the browser destinations and key modes recorded for the project. Confi
 
 Configure the key type and WPM in the app where those options are available.
 
-| App | Straight key | Paddle | Firmware mode |
-|---|:---:|:---:|---|
+| App | Straight key | Paddle | Mode |
+|:---:|:---:|:---:|:---:|
 | [Morse](https://play.google.com/store/apps/details?id=com.mweutbycjynwq.morse&hl=en_IN) | Yes | No | Type 1 |
 | [Morse Keyer](https://play.google.com/store/apps/details?id=com.qft8.morsekeyer&hl=en_IN) | Yes | Yes | Type 1 |
 | [Morse Chat](https://play.google.com/store/apps/details?id=digital.dong.morsechat&hl=en_IN) | Yes | No | Type 1 |
@@ -122,6 +128,6 @@ Bin file and instructions to upload will be added soon!! .
 - Slight warmth during BLE operation has been observed on the prototype.
 
 
-📫 Please mail for any query/support:
-rn.ksheer+vband@gmail.com
+📫 Mail for any query/support:
+   rn.ksheer+vband@gmail.com
 
