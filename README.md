@@ -1,4 +1,5 @@
-# Multi-Feature Advanced Morse Wireless Adapter <img width="60" alt="morse-key-signal-icon-minimalist-260nw-2851649717" src="https://github.com/user-attachments/assets/35ba05e1-7829-4261-bcf2-3cc039d2356a" />
+# Multi-Feature Advanced Morse Wireless Adapter <img width="10%" alt="morsekey" src="https://github.com/user-attachments/assets/745eacf0-a935-4d2f-8c18-5d31fdf1e035" />
+
 
 
 A wireless Morse key interface built around an **esp32mini microcontroller**. Connect a straight key or paddle and use it as a BLE keyboard with Notepad, supported browser-based Morse tools, or compatible Android apps.
