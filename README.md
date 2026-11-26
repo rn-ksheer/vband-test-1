@@ -1,4 +1,4 @@
-# Multi-Feature Advanced Morse Wireless Adapter <img width="10%" alt="morsekey" src="https://github.com/user-attachments/assets/745eacf0-a935-4d2f-8c18-5d31fdf1e035" />
+# Advanced Morse Wireless Adapter <img width="10%" alt="morsekey" src="https://github.com/user-attachments/assets/745eacf0-a935-4d2f-8c18-5d31fdf1e035" />
 
 
 
