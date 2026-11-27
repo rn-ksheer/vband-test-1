@@ -75,15 +75,18 @@ https://github.com/user-attachments/assets/6a893ce2-07dc-420e-a74e-3e57f22fd450 
 >Only one host should be connected over Bluetooth at a time. Disconnect the current host before connecting another computer or phone.
 
 ## DIP switch modes
+<p align="center">
+<img width="30%" alt="DIP Switches_ All Left Levers OFF" src="https://github.com/user-attachments/assets/30534b93-4d1a-4bbd-b81f-68080154d6c6" />
+</p>
 
-| DIP value | SW1 | SW2 | SW3 | SW4 | SW5 | Selected mode | Key behavior / speed | Buzzer|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 0 | 0 | 0 | 0 | 0 | 0 | Notepad straight key | 10 WPM | ✅ | 
-| 1 | 1 | 0 | 0 | 0 | 0 | Notepad paddle key | 12 WPM |  :white_check_mark: |
-| 3 | 1 | 1 | 0 | 0 | 0 | VBand Type 1 | Configurable on the website | :x: |
-| 7 | 1 | 1 | 1 | 0 | 0 | VBand Type 2 | Configurable on the website | :x: |
-| 15 | 1 | 1 | 1 | 1 | 0 | VBand Type 3 | Configurable on the website | :x: |
-| 31 | 1 | 1 | 1 | 1 | 1 | VBand Type 4 | Configurable on the website | :x: |
+| SW1 | SW2 | SW3 | SW4 | SW5 | Selected mode | Key behavior / speed | Buzzer|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 0 | 0 | 0 | 0 | 0 | Notepad straight key | 10 WPM | ✅ | 
+| 1 | 0 | 0 | 0 | 0 | Notepad paddle key | 12 WPM |  :white_check_mark: |
+| 1 | 1 | 0 | 0 | 0 | VBand Type 1 | Configurable on the website | :x: |
+| 1 | 1 | 1 | 0 | 0 | VBand Type 2 | Configurable on the website | :x: |
+| 1 | 1 | 1 | 1 | 0 | VBand Type 3 | Configurable on the website | :x: |
+| 1 | 1 | 1 | 1 | 1 | VBand Type 4 | Configurable on the website | :x: |
 
 
 >Buzzer and LEDs follow the generated Morse elements.
